@@ -1,0 +1,128 @@
+.about-container{
+    background-image: url('./Shiny\ Overlay.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.developer-content{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.developer-description-container{
+    max-width: 95%;
+    margin: auto;
+}
+.developer-description{
+    font-family: "Roboto";
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2;
+}
+
+@media screen and (min-width:768px){
+    .developer-description{
+        font-size: 22px;
+    }
+}
+.developer-image{
+    width:120px;
+    height: 120px;
+    border-radius: 100px;
+}
+.developer-name{
+    margin-top: 1;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 14px;
+    color: #f9f9f9;
+}
+
+@media screen and (min-width:768px){
+    .developer-name{
+        font-size: 20px;
+    }
+
+}
+.developer-education{
+    margin-top: 0;
+    font-family: 'DM Sans';
+    font-weight: 200;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+}
+@media screen and (min-width:768px){
+    .developer-education{
+        font-size: 20px;
+    }
+
+}
+.skills-main-heading{
+    font-family: 'DM Sans';
+    font-size: 18px;
+    color: #f9f9f9;
+}
+@media screen and (min-width:768px){
+    .skills-main-heading{
+        font-size: 24px;
+    }
+
+}
+.skills-main-container{
+    border-top:2px solid #f0f0f0;
+}
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    margin: 0;
+    flex-wrap: wrap;
+
+}
+.skill-image{
+    width:40px;
+}
+
+@media screen and (min-width:768px){
+    .skill-image{
+        width: 80px;
+    }
+
+}
+.skill-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 250px;
+    margin: 10px;
+    margin-left: 0;
+}
+@media screen and (min-width:768px){
+    .skill-card{
+       margin: 25px;
+       margin-left: 0;
+    }
+
+}
+.skill-name{
+    font-family: 'DM Sans';
+    font-weight: 300;
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 10px;
+    line-height: 1;
+}
+@media screen and (min-width:768px){
+    .skill-name{
+        font-size: 20px;
+    }
+}
