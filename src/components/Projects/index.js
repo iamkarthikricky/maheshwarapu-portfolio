@@ -327,7 +327,7 @@ class  Projects extends Component{
       <div className="projects-main-container">
       <Header />
     <img src='https://res.cloudinary.com/dlwydxzdi/image/upload/v1668515653/Own-Website/banner-all_l6nhuz.png' alt='inconvinence' className='banner-img'/>
-    <h1 className="projects-heading">This Path will be made available on <span className='deadline'>28 Nov, 2022</span></h1>
+    <h1 className="projects-heading">This Path will be made available on <span className='deadline'>05 December, 2022</span></h1>
     <p className='projects-heading'>You will be redirected to home page in {redirectSeconds} seconds</p>
   </div>
     )
