@@ -1,0 +1,37 @@
+.react-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-heading{
+    font-family: 'Bree Serif';
+    font-size: 16px;
+    font-weight: bold;
+}
+@media  screen and (min-width:768px) {
+    .main-heading{
+        font-size: 24px;
+    }
+}
+.topic-container{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 50%;
+    margin: auto;
+}
+.topic-btn{
+    background-color: transparent;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+    border: none;
+}
+.active-topic{
+    border-bottom: 2px solid red;
+}

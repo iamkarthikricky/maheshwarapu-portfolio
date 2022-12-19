@@ -23,6 +23,7 @@ class Home extends Component{
         return(
             <div className='home-container'>
             <Header />
+            <p className='suggestion'>**For Better Experience Kindly, Turn ON Desktop Mode.</p>
                 <h1 className='text-color'>
                     Thankyou For Visiting my site !!<br /><br/>
                     Before moving Further, let's get to know about the developer

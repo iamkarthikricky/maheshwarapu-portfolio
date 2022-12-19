@@ -2,7 +2,7 @@ import {Switch,Route} from 'react-router-dom'
 import {Component} from 'react'
 
 import Home from '../src/components/Home/index'
-import About from './components/About'
+import About from './components/AboutTheDeveloper'
 import Projects from './components/Projects'
 
 

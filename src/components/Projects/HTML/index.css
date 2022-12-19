@@ -1,0 +1,83 @@
+.html-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.html-heading{
+    font-family: 'Bree Serif';
+    font-size: 18px;
+}
+
+.html-para{
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+}
+.html-project-title{
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+.html-project-description{
+    font-family: 'Open Sans';
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media screen and (min-width:768px) {
+    .html-main-container{
+        font-size: 20px;
+    }
+    .html-para{
+        font-size: 18px;
+    }
+    .html-heading{
+        font-size: 24px;
+    }
+    .html-project-title{
+        font-family: 'Bree Serif';
+        font-size: 20px;
+    }
+    .html-project-description{
+        font-family: 'Bree Serif';
+        font-size: 18px;
+    }
+}
+
+.html-ul-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .html-ul-list{
+        width: 60%;
+    }
+}
+.img{
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.visit-link{
+    text-decoration: none;
+    color: red;
+}
+.project-list-item{
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:  0px 4px 16px 0px #bfbfbf;
+    width: 180px;
+    margin-bottom: 10px;
+}
+@media  screen and (min-width:768px) {
+    .project-list-item{
+        width:300px;
+        margin: 20px;
+    }
+}

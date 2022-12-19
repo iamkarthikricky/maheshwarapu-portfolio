@@ -1,0 +1,61 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 3px;
+}
+.project-img{
+    width:100%;
+}
+.title{
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 500;
+    color:#f1f1f1;
+}
+
+.description{
+    font-family: 'DM Sans';
+    font-size: 12px;
+    font-weight: 300;
+    color:#ffffff;
+}
+.link{
+    text-decoration: none;
+    color:pink;
+}
+.tags-main-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5px;
+}
+.tag-name{
+    font-family: 'Bree Serif';
+    font-size: 12px;
+    color:yellow;
+    line-height: 1;
+}
+
+@media screen  and (min-width:768px){
+    .title{
+        font-size: 20px;
+    }
+    .main-heading{
+        font-size: 26px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .tag-name{
+        font-size: 16px;
+    }
+}

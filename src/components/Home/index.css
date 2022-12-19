@@ -14,7 +14,19 @@
     text-align: center;
 }
 
+.suggestion{
+    font-family: 'DM Sans';
+    font-size: 16px;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+    margin-top: 0;
+}
+
 @media screen and (min-width:768px){
+    .suggestion{
+        display: none;
+    }
     .text-color{
         font-size: 24px;
     }
@@ -33,11 +45,17 @@
     color: #f9f9f9;
     align-self: center;
 }
+
 .email-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-self: center;
+    display: none;
+}
+@media screen and (min-width:768px){
+    .email-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+    }
 }
 .email{
     font-family: "DM Sans";
