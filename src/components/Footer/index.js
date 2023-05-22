@@ -5,12 +5,10 @@ import {AiFillInstagram} from 'react-icons/ai'
 import {BsFacebook} from 'react-icons/bs'
 const Footer=()=>(
     <div className='footer-main-container'>
-    <div className='footer-container'>
-        <div className='website-logo-container'>
-            <FaReact color='#ffffff' size='24'/>
-            <p className='footer-logo-description'>React Developer</p>
+    <div className='footer-container'> 
+        <div className='website-logo-container'>  
+            <p className='footer-logo-description'>Karthik Maheshwarapu</p>
         </div>
-        <h1 className='footer-description'>Connect me </h1>
         <div className='contact-us-btn-container'>
         <a href='https://www.linkedin.com/in/maheshwarapu-karthik/' target='_blank' rel='noreferrer' className='anchor'>
             <button className='social-btn'>

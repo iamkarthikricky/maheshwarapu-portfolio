@@ -14,7 +14,7 @@ const SkillDataList=[
     },{
         id:6,skillImg:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1668419679/Own-Website/reactjs-img_vo3hjr.png',skillName:'React JS'
     },{
-        id:7,skillImg:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1668419679/Own-Website/sqlite-img_gwiwkk.png',skillName:'SQL Lite'
+        id:7,skillImg:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1680869298/Own-Website/Screenshot_2023-04-07_173719_uasbjn.png',skillName:'SQL Lite'
     },{
         id:8,skillImg:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1668420066/Own-Website/microsoft-sql-server4529_r0bsqh.jpg',skillName:'Microsoft SQL Server'
     },
@@ -36,12 +36,18 @@ const SkillCard=props=>{
 }
 
 const About=()=>(
-    <div className='about-container'>
+    <>
+    <div className='about-main-container'>
     <Header />
         <div className='developer-content'>
         <img src='https://res.cloudinary.com/dlwydxzdi/image/upload/v1668405289/Own-Website/20211120_111711_pock4l.jpg' alt='developer-img' className='developer-image' />
         <p className='developer-name'>Maheshwarapu Karthik</p>
         <p className='developer-education'>B.Tech - E.C.E - 2021</p>
+        <a href='https://drive.google.com/file/d/1epjGhWtTRIbEQrKJl-QuI1FBja82nUty/view?usp=share_link' target='_blank' rel='noreferrer' className='nav-link'>
+            <button className='resume-btn'>
+                View Resume
+            </button>
+        </a>
         </div>
         <div className='developer-description-container'>
             <p className='developer-description'>I am Maheshwarapu Karthik, I am from Telangana,India. I completed my graduation in Bachelor of Technology from SRM Institute of Science and Technology, Ramapuram, Chennai specialized in Electronics and Communication Engineering. I am an Aspiring FullStack Developer. I have gained knowledge on almost all the Full Stack development Technologies and have built some of the projects from the knowledge I gained. I am looking for a FullStack Developer role.</p>
@@ -54,8 +60,9 @@ const About=()=>(
             </div>
             </div>
             </div>
-        <Footer />
         </div>
+        <Footer />
+        </>
 )
 
 export default About

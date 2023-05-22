@@ -5,6 +5,7 @@ import BasicHTML from "./HTML";
 import JavaScriptProjects  from "./JavaScript";
 import NodeJs from "./NodeJs/index";
 import ReactProjects from "./ReactJs/index";
+
 import './index.css'
 
 
@@ -37,8 +38,8 @@ const SkillName=props=>{
     const activeSkillTab=activeSkill ? 'active-skill':''
 
     return(
-        <li className={`list-item ${activeSkillTab}`}>
-            <button onClick={onSkillClick} className="skill-btn">{displayText}</button>
+        <li className={`skill-list-item ${activeSkillTab}`} onClick={onSkillClick}>
+           <p>{displayText}</p>
         </li>
     )
 }
@@ -70,7 +71,7 @@ class Projects extends Component{
     render(){
         const{activeTab}=this.state
         return(
-            <>
+            <div className="project-container">
                  <Header />
            <div className="projects-main-container">
                 <div className="project-skill-tab">
@@ -84,7 +85,8 @@ class Projects extends Component{
                 {this.displayProjects()}
                 </div>
            </div>
-           </>
+           </div>
+          
         )
     }
 }

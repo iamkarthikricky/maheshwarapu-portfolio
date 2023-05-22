@@ -3,8 +3,8 @@
     background-color: #010101;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-self: flex-end;
+    align-self:flex-end;
+    padding-left: 30px;
 }
 .footer-container{
     display: flex;
@@ -16,16 +16,16 @@
     flex-direction: row;
     align-items: center;
 }
-.footer-description{
-    font-family: "Roboto";
-    font-size: 14px;
-    color: #f9f9f9;
+.profile-logo{
+    width: 90px;
+    height: 100px;
 }
 .footer-logo-description{
-    font-family: 'DM Sans';
-    font-size: 16px;
-    color: #ffffff;
-    margin-left: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    color: #f9f9f9;
 }
 
 @media screen and (min-width:768px){

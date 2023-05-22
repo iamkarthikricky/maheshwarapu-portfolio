@@ -1,85 +1,181 @@
-.home-container{
-    background-image: url('./Simple\ Shiny.svg');
-    background-size: cover;
-    min-height: 100vh;
+.home-main-container{
+    padding-left: 20px;
+}
+@media screen and (min-width:768px) {
+    .home-main-container{
+        padding-left: 50px;
+    }
+}
+.profile-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    padding-bottom: 30px;
 }
-.text-color{
+.profile-sub-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.salutation{
+    font-family: 'Open Sans';
+    font-size: 18px;
+    line-height: 0;
+}
+.full-stack-button{
+    background-color:#7D33FF;
+    border-radius: 15px;
+    height: 30px;
+    width: 200px;
+    margin-left: 5px;
     font-family: 'Roboto';
     font-size: 16px;
-    font-weight: 200;
-    color:#ffffff;
-    text-align: center;
+    font-weight: 500;
+    color:white;
+    border: none;
 }
-
-.suggestion{
+.home-description{
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hire-me-btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.hire-me-btn:hover,
+.hire-me-btn:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.hire-me-btn:hover {
+  transform: translateY(-1px);
+}
+
+.hire-me-btn:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.projects-btn {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #405cf5;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
-    font-weight: 500;
-    color: red;
-    text-align: center;
-    margin-top: 0;
-}
-
-@media screen and (min-width:768px){
-    .suggestion{
-        display: none;
-    }
-    .text-color{
-        font-size: 24px;
-    }
-}
-.btn{
-    margin-top: 0;
-    width: 90px;
-    height: 30px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background-color: orange;
-    font-family: 'Bree Serif';
-    font-size: 14px;
-    font-weight: 500;
-    color: #f9f9f9;
-    align-self: center;
-}
-
-.email-container{
-    display: none;
-}
-@media screen and (min-width:768px){
-    .email-container{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-self: center;
-    }
-}
-.email{
-    font-family: "DM Sans";
-    font-weight: 200;
-    font-size: 14px;
-    color: #f9f9f9;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
     margin-left: 10px;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+  
+  .projects-btn:hover,
+  .projects-btn:focus {
+    background-color: #405cf5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  
+  .projects-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .projects-btn:active {
+    background-color: #405cf5;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+  }
+
+
+.hire-me{
+    color:#f9f9f9;
+    font-size: 18px;
+    margin-left: 3px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
 }
 @media screen and (min-width:768px){
-    .email{
-        font-size: 24px;
+    .salutation{
+        font-size: 22px;
     }
-
+    .full-stack-button{
+        height: 30px;
+        width: 150px;
+    }
+    .home-description{
+        font-size: 22px;
+    }
+    .flex-container{
+        width: 400px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
-.copy-btn{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
+.num-count{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
 }
-.copy-success-text{
-    font-family: "DM Sans";
-    font-size: 12px;
-    color: #f9f9f9;
-    text-align: center;
-    margin-top: 0;
+.context{
+    margin-top: 6px;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-family: 500;
 }

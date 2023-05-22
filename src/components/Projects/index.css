@@ -1,14 +1,24 @@
+.project-container{
+    width: 100%;
+    padding-left: 20px;
+}
+@media screen and (min-width:768px) {
+    .project-container{
+        padding-left: 50px;
+        width: 100%;
+    }
+}
 .projects-main-container{
     display: flex;
     flex-direction: row;
 }
 .projects-container{
-   width:80%;
+   width:100%
 }
 .project-skill-tab{
     min-height: 100vh;
     width:150px;
-    background-color: #000000;
+    background-color: #040303;
 }
 .skill-ul-list{
     list-style: none;
@@ -18,30 +28,17 @@
 }
 .active-skill{
     background-color: #383838;
+    color: red;
 }
 
-.list-item{
+.skill-list-item{
+    padding-left: 10px;
+    color:#f9f9f9;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    width: 140px;
     height: 45px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.skill-btn{
-    color: #f9f9f9;
-    font-family: 'DM Sans';
-    font-size: 12px;
-    margin-left: 5px;
-    background-color:transparent;
-    border:none;
-    outline: none;
-    cursor: pointer;
-}
-
-@media screen and (min-width:768px){
-    .project-skill-tab{
-        width: 150px;
-    }
-    .skill-btn{
-        font-size: 18px;
-    }
 }

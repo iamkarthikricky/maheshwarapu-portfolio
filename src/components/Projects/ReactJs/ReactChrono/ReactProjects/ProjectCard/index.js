@@ -5,7 +5,7 @@ import './index.css';
 
 const ProjectCard=props=>{
     const{cardItem}=props
-    const{title,description,url,tagsList}=cardItem
+    const{title,description,url,tagsList}=cardItem 
     return(
             <div className="card-container">
                 <p className="title">{title}</p>

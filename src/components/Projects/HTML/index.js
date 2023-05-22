@@ -1,37 +1,8 @@
+import { Component } from 'react'
+import { FailureView,LoadingView } from '../Miscellaneous'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import './index.css'
-const projectItems=[
-    {
-        id:1,
-        imgUrl:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1671431049/Own-Website/Static%20Website/Screenshot_20221219_115358_xm5opv.png',        projectTitle:'Tourism Website',
-        altText:'tourism-website',
-        description:'This is a static website developed using HTML and CSS.',
-        url:'https://tourism-static.netlify.app/'
-    },
-    {
-        id:2,
-        imgUrl:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1671430964/Own-Website/Static%20Website/Screenshot_20221219_115226_wsefv9.png',        projectTitle:'Product Launch',
-        altText:'product-launch',
-        description:'This is a Responsive Website developed using HTML, CSS and Bootstrap.',
-        url:'https://product-launch.netlify.app/'
-    },
-    {
-        id:3,
-        imgUrl:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1671430878/Own-Website/Static%20Website/Screenshot_20221219_115103_uwoods.png',
-        altText:'food-munch',
-        projectTitle:'Food Munch',
-        description:'This is a Responsive Website developed using HTML, CSS and Bootstrap.',
-        url:'https://food-munch-website.netlify.app/'
-    },{
-        id:4,
-        imgUrl:'https://res.cloudinary.com/dlwydxzdi/image/upload/v1671431239/Own-Website/Static%20Website/Screenshot_20221219_115709_ebfp2b.png',
-        altText:'climate-stats',
-        projectTitle:'Climate Stats',
-        description:'This is a Responsive Website developed using HTML, CSS and Bootstrap.',
-        url:'https://climate-stats.netlify.app/'
-    }
 
-]
 
 const ProjectCard=props=>{
     const{project}=props
@@ -47,16 +18,94 @@ const ProjectCard=props=>{
         </li>
     )
 }
-const BasicHTML=()=>(
-    <div className='html-main-container'>
+
+const apiStatusConstants = {
+    initial: 'INITIAL',
+    inProgress: 'INPROGRESS',
+    success: 'SUCCESS',
+    failure: 'FAILURE',
+}
+
+
+class BasicHTML extends Component{
+
+    state={projectItems:[],apiStatus:apiStatusConstants.initial}
+
+    componentDidMount(){
+        this.getHTMLProjects()
+    }
+
+    getHTMLProjects=async()=>{
+        this.setState({apiStatus:apiStatusConstants.inProgress})
+        const url='https://portfolio-api-f4rq.onrender.com/html'
+
+        const options={
+            method:'GET',
+            headers: {
+                "Content-Type": 'application/json'
+            }
+        }
+
+        const response=await fetch(url,options)
+        if (response.ok){
+            const fetchedData=await response.json()
+
+            const updatedFetchedData=fetchedData.map(eachItem=>({
+                projectId:eachItem.project_id,
+                imgUrl:eachItem.img_url,
+                altText:eachItem.alt_text,
+                projectTitle:eachItem.project_title,
+                description:eachItem.description,
+                url:eachItem.url,
+            }))
+
+            this.setState({projectItems:updatedFetchedData,apiStatus:apiStatusConstants.success})
+
+        }
+        else{
+            this.setState({apiStatus:apiStatusConstants.failure})
+        }
+    }
+
+
+    renderProjects=()=>{
+        const {projectItems}=this.state
+        return(
+        <div className='html-main-container'>
         <h1 className='html-heading'>HTML Projects</h1>
         <p className='html-para'>This page contains both Static and Responsive Websites of  HTML projects.</p>
         <ul className='html-ul-list'>
             {projectItems.map(eachItem=>(
-                <ProjectCard key={eachItem.id} project={eachItem} />
+                <ProjectCard key={eachItem.projectId} project={eachItem} />
             ))}
         </ul>
     </div>
-)
+        )
+    }
+
+    renderHTMLProjects=()=>{
+        const{apiStatus}=this.state 
+        switch(apiStatus){
+            case apiStatusConstants.success:
+                return this.renderProjects()  
+            case apiStatusConstants.inProgress:
+                return <LoadingView />   
+            case apiStatusConstants.failure:
+                return <FailureView />     
+            default:
+                return null     
+        }
+    }
+
+
+    
+
+    render(){
+        return(<>
+            {this.renderHTMLProjects()}</>
+        )
+        
+    }
+}
 
 export default BasicHTML
