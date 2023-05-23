@@ -46,7 +46,7 @@ const SkillName=props=>{
 
 class Projects extends Component{
 
-    state={activeTab:TabItem[0].tabId}
+    state={activeTab:TabItem[3].tabId}
 
     onSkill=eachItem=>{
         this.setState({activeTab:eachItem})
@@ -74,13 +74,13 @@ class Projects extends Component{
             <div className="project-container">
                  <Header />
            <div className="projects-main-container">
-                <div className="project-skill-tab">
+           <div className="project-skill-tab">
                     <ul className="skill-ul-list">
                         {TabItem.map(eachItem=>(
                             <SkillName key={eachItem.tabId} data={eachItem} onSkill={this.onSkill} activeSkill={activeTab===eachItem.tabId} />
                         ))}
                     </ul>
-                </div>
+                </div> 
                 <div className="projects-container">
                 {this.displayProjects()}
                 </div>

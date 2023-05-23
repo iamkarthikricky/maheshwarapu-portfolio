@@ -2,10 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 3px;
-}
-.project-img{
-    width:100%;
+    align-items: flex-start;
+    padding:auto;
 }
 .title{
     font-family: 'Roboto';
@@ -27,6 +25,7 @@
 .tags-main-container{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
@@ -36,7 +35,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 5px;
 }
 .tag-name{
     font-family: 'Bree Serif';

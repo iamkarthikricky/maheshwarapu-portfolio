@@ -87,7 +87,7 @@ class BasicHTML extends Component{
         const{apiStatus}=this.state 
         switch(apiStatus){
             case apiStatusConstants.success:
-                return this.renderProjects()  
+                return this.renderProjects() 
             case apiStatusConstants.inProgress:
                 return <LoadingView />   
             case apiStatusConstants.failure:

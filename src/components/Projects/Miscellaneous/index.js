@@ -17,7 +17,10 @@ export const LoadingView=()=>(
 )
 
 export const FailureView=()=>(
-    <div>
-        <h1>hi</h1>
+    <div className='failure-container'>
+        <img src='https://res.cloudinary.com/dlwydxzdi/image/upload/v1684846984/not-found-img_v7nehg.png' alt="not-found" className='failure-img'/>
+        <p className='f-main-para'>Oops! Something Went Wrong</p>
+        <p className='f-para'>We Cannot seem to find the page you are looking for.</p>
+        <span className='span'>Kindly Refresh the page.</span>
     </div>
 )

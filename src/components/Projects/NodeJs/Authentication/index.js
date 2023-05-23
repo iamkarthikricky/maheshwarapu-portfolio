@@ -20,7 +20,7 @@ class Authentication extends Component{
 
     getProjects=async()=>{
         this.setState({apiStatus:apiStatusConstants.inProgress})
-        const url='https://portfolio-api-f4rq.onrender.com/nodeJS'
+        const url='https://portfolio-api-f4rq.onrender.com/nodejs/authentication'
 
         const options={
             method:'GET',
